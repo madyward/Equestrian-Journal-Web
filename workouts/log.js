@@ -19,9 +19,13 @@ $(function(){
 				var len = history.length;
 				var lis = "";
 				for (var i = 0; i < len; i++){
-					lis += "<li class='list-group-item'>" + history[i].def + "-" + history[i].result + "" + "<div class='pull-right'>" + 
-					"<button id='" + history[i].id + "' class='update'><strong>U</strong></button>" + "<button id='" +
-					history[i].id + "' class='remove'><strong>X</strong></button>" + "</div></li>";
+					lis += "<li class='list-group-item'>" +
+					history[i].def + " - " + 
+					history[i].result + " " + 
+					"<div class='pull-right'>" + 
+						"<button id='" + history[i].id + "' class='update'><strong>U</strong></button>" + 
+						"<button id='" + history[i].id + "' class='remove'><strong>X</strong></button>" + 
+					"</div></li>";
 				}
 				/*for (var i = 0; i < len; i++){
 					lis += "<li class='list-group-item'>" + history[i].def + "-" + history[i].result + "</li>";
