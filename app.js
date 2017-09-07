@@ -58,6 +58,18 @@ $(function(){
 		}
 	});
 
+	//bind enter key
+	$(document).on("keypress", function(e){
+		if(e.which === 13) { //enter key
+			if ($("#signup-modal").is(":visible")){
+				$("#signup").trigger("click");
+			}
+			if($("#login-modal").is(":visible")){
+				$("#login").trigger("click");
+			}
+		}
+	});
+
 
 	//bind tab change events
 	//bootstrap tab -- binding to a bootstrap event
