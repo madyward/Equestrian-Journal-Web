@@ -33,7 +33,7 @@ $(function(){
 				$(".disabled").removeClass("disabled");
 				$("#loginout").text("Logout");
 				//go to define tab
-				$(".nav-tabs a[href='#define']").tab("show");
+				$('.nav-tabs a[href="#define"]').tab("show");
 
 				$('a[href="#define"]').tab("show");
 				$("#su_username").val("");
