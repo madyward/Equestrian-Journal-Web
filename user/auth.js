@@ -15,7 +15,7 @@ $(function(){
 			//Sign Up post:
 			var signup = $.ajax({
 				type: "POST",
-				url: WorkoutLog.API_BASE + "/api/user",
+				url: WorkoutLog.API_BASE + "user",
 				data: JSON.stringify(user),
 				contentType: "application/json"
 			});
