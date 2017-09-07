@@ -17,7 +17,7 @@
 
 $(function(){
 	var WorkoutLog = (function($, undefined){
-		var API_BASE = "http://localhost:3000/api/";
+		var API_BASE = "https://wosworkoutserv.herokuapp.com/";
 		var userDefinitions = [];
 		var setAuthHeader = function(sessionToken) {
 			window.localStorage.setItem("sessionToken", sessionToken);

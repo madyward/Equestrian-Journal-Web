@@ -1,15 +1,23 @@
 {
-  "name": "workoutlogclient",
+  "name": "WorkoutLogWeb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/http-server/bin/http-server"
+    "start": "node ./node_modules/http-server/bin/http-server",
+    "postinstall": "bower install"
   },
   "author": "Madyson Ward",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+    "bower": "^1.8.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-watch": "^4.3.11",
     "http-server": "^0.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
   }
 }
