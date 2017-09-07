@@ -14,6 +14,7 @@ $(function(){
 				$("#" + type + "-definition").append(opts);
 			},
 			setHistory: function(){
+				console.log(WorkoutLog.log.workouts);
 				var history = WorkoutLog.log.workouts;
 				var len = history.length;
 				var lis = "";
