@@ -34,6 +34,7 @@ $(function(){
 					result: $("#log-result").val(),
 					def: $("#log-definition option:selected").text()
 				};
+				console.log(itsLog);
 				var postData = {log: itsLog};
 				var logger = $.ajax({
 					type: "POST",
