@@ -31,7 +31,11 @@ $(function(){
 				}
 				$("#signup-modal").modal("hide");
 				$(".disabled").removeClass("disabled");
+				$(".hidden").removeClass("hidden");
 				$("#loginout").text("Logout");
+				$("#defineTab").text("Define Workouts");
+				$("#logTab").text("Log Your Workout");
+				$("#historyTab").text("View History");				
 				//go to define tab
 				$('.nav-tabs a[href="#define"]').tab("show");
 
@@ -70,7 +74,11 @@ $(function(){
 				}
 				$("#login-modal").modal("hide");
 				$(".disabled").removeClass("disabled");
+				$(".hidden").removeClass("hidden");
 				$("#loginout").text("Logout");
+				$("#defineTab").text("Define Workouts");
+				$("#logTab").text("Log Your Workout");
+				$("#historyTab").text("View History");		
 				$("#li_username").val("");
 				$("#li_password").val("");
 				$('a[href="#define"]').tab("show");
@@ -85,9 +93,8 @@ $(function(){
 		loginout: function(){
 			if (window.localStorage.getItem("sessionToken")){
 				window.localStorage.removeItem("sessionToken");
-				window.location.reload(true);
 			}
-			
+			$(".tab1").hide().addClass("disabled");
 		}
 
 		
