@@ -85,9 +85,9 @@ $(function(){
 		loginout: function(){
 			if (window.localStorage.getItem("sessionToken")){
 				window.localStorage.removeItem("sessionToken");
-				$("#loginout").text("Login");
+				window.location.reload(true);
 			}
-			//TODO: On logout, make sure stuff is disabled.
+			
 		}
 
 		
@@ -95,9 +95,7 @@ $(function(){
 	//Bind Events:
 	$("#login").on("click", WorkoutLog.login);
 	$("#signup").on("click", WorkoutLog.signup);
-	$("#loginout").on("click", function(){
-		window.location.reload(true);
-	});
+	$("#loginout").on("click", WorkoutLog.loginout);
 
 	if (window.localStorage.getItem("sessionToken")){
 		$("#loginout").text("Logout");
