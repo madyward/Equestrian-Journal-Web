@@ -122,7 +122,7 @@ $(function(){
 				//deletes item out of workouts array
 				for (i = 0; i < WorkoutLog.log.workouts.length; i++){
 					if (WorkoutLog.log.workouts[i].id == thisLog.id){
-						WorkoutLog.log.workouts.splice(i, 1, thisLog);
+						WorkoutLog.log.workouts.splice(i, 1);
 					}
 				}
 				deleteLog.fail(function(){
