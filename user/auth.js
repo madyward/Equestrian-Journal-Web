@@ -2,14 +2,16 @@ $(function(){
 	$.extend(WorkoutLog, {
 		//Sign Up Method:
 		signup: function(){
-			//Username and Password variables:
+			//Username, Password, & DOB variables:
 			var username = $("#su_username").val();
 			var password = $("#su_password").val();
+			var dob = $("#su_DOB").val();
 			//User object:
 			var user = {
 				user: {
 					username: username,
-					password: password
+					password: password,
+					dob: dob
 				}
 			};
 			//Sign Up post:
@@ -43,6 +45,7 @@ $(function(){
 				$('a[href="#define"]').tab("show");
 				$("#su_username").val("");
 				$("#su_password").val("");
+				$("#su_DOB").val("");
 			})
 			.fail(function(){
 				$("#su_error").text("There was an issue with sign up").show();
@@ -99,9 +102,22 @@ $(function(){
 			$(".tab1").hide().addClass("disabled");
 		}
 
+
 		
 	});
-	//Bind Events:
+
+	//Sign Up & Login Modal Bind Events
+	$("#signup-modal").on("shown.bs.modal", function(){
+		$("#su_username").focus();
+		$("#su_username").attr("required", true);
+		$("#su_DOB").attr("required", true);
+	});
+	$("#login-modal").on("shown.bs.modal", function(){
+		$("#li_username").focus();
+	});
+
+
+	//Other Bind Events:
 	$("#login").on("click", WorkoutLog.login);
 	$("#signup").on("click", WorkoutLog.signup);
 	$("#loginout").on("click", WorkoutLog.loginout);
