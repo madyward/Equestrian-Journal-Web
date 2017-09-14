@@ -109,9 +109,8 @@ $(function(){
 	//Sign Up & Login Modal Bind Events
 	$("#signup-modal").on("shown.bs.modal", function(){
 		$("#su_username").focus();
-		$("#su_username").attr("required", true);
-		$("#su_DOB").attr("required", true);
 	});
+	//-------
 	$("#login-modal").on("shown.bs.modal", function(){
 		$("#li_username").focus();
 	});
