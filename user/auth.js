@@ -5,13 +5,13 @@ $(function(){
 			//Username, Password, & DOB variables:
 			var username = $("#su_username").val();
 			var password = $("#su_password").val();
-			var dob = $("#su_DOB").val();
+		//	var dob = $("#su_DOB").val();
 			//User object:
 			var user = {
 				user: {
 					username: username,
 					password: password,
-					dob: dob
+				//	dob: dob
 				}
 			};
 			//Sign Up post:
